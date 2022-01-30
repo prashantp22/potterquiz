@@ -1,0 +1,54 @@
+
+button {
+    background-color: blue;
+    color: white;
+    font-size: medium;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px
+}
+
+.header{
+    display: block;
+}
+
+#timer{
+    float: right;
+}
+
+
+#start{
+    margin-left: 50%;
+    margin-top: 25%;
+}
+
+#question{
+    text-align: center;
+}
+
+#question-result{
+    text-align: center;
+}
+
+#option-list{
+    text-align: center;
+    list-style: none;
+}
+
+h2{
+    text-align: center;
+}
+
+#intials{
+    margin-left: 40%;
+}
+
+#submit{
+    margin-left: 20px;
+    
+}
+
+.score{
+    text-align: center;
+    font-size: 30px;
+}
