@@ -22,6 +22,7 @@ https://prashantp22.github.io/potterquiz/
 
 ## Screen Shot
 
+<img width="830" alt="image" src="https://user-images.githubusercontent.com/96153408/151719601-45920b3d-3df4-4e10-8304-8c0cb8487581.png">
 
 
 
