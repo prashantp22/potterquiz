@@ -53,6 +53,18 @@ function endQuiz() {
             name: initials,
             score: correctCount,
         }
+
+        var allscores =localStorage.getItem("allscores");
+        if (allscores === null){
+            allscores = [];
+        }else{
+            allscores = JSON.parse(allscores);
+        }
+        
+        allscores.push(finalscore);
+        localStorage.setItem("allscores", JSON.stringify(allscores));
+
+
         console.log(finalscore);
 
 
