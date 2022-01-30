@@ -8,6 +8,7 @@ var storedScores = JSON.parse(localStorage.getItem("allscores"));
 function displayscores(){
     if (storedScores !== null) {
         var scoreList =document.createElement("ul");
+        scoreList.className = "list"
 
         for (var i = 0; i < storedScores.length; i++) {
             var scoreEntry = document.createElement("li");

@@ -1,13 +1,33 @@
 var questions = [
     {
-        question: "question 1",
-        choices: ["A","B","C","D"],
-        answer: "A",
+        question: "Who is NOT a Gryffindor?",
+        choices: ["Draco Malfoy","Ron Weasley","Ginny Weasley","Harry Potter"],
+        answer: "Draco Malfoy",
     },
     {
-        question: "question 2",
-        choices: ["A","B","C","D"],
-        answer: "C",
+        question: "What is the name of Hagrid's pet dragon?",
+        choices: ["Bernard","Norman","Norbert","Fluffy"],
+        answer: "Norbert",
+    },
+    {
+        question: "What form is Hermione's patronus?",
+        choices: ["Rabbit", "Swan", "Horse", "Otter"],
+        answer: "Otter",
+    },
+    {
+        question: "Which character's name is the first to be mentioned in the film series?",
+        choices: ["Harry Potter", "Professor McGonagall", "Hagrid", "Professor Dumbledore"],
+        answer: "Professor McGonagall",
+    },
+    {
+        question: "What position does Harry play on his Quidditch team?",
+        choices: ["Keeper", "Seeker", "Bludger", "Chaser"],
+        answer: "Seeker",
+    },
+    {
+        question: "Who is Fluffy",
+        choices: ["Hermione's Cat", "Harry's Owl", "A Three-Headed Dog", "Hagrid's Dragon"],
+        answer: "A Three-Headed Dog",
     }
 ]
 
@@ -18,6 +38,8 @@ var optionListEl = document.querySelector("#option-list");
 var questionResultEl = document.querySelector("#question-result");
 var timerEl = document.querySelector("#timer");
 var submitEL = document.querySelector("#submit");
+var introEl = document.querySelector("#intro1");
+var intro2El = document.querySelector("#intro2");
 
 
 
@@ -25,7 +47,7 @@ var questionIndex = 0;
 var correctCount = 0;
 
 // add variables to hold the time and intervaliD for the timer
-var time = 20;
+var time = 35;
 var intervalID;
 
 function endQuiz() {
@@ -38,7 +60,7 @@ function endQuiz() {
     var createInput = document.createElement("input");
     createInput.textContent = "";
     createInput.setAttribute("type", "text");
-    createInput.setAttribute("id", "intials");
+    createInput.setAttribute("id", "initials");
     createInput.setAttribute("placeholder", "Enter Name");
     document.body.appendChild(createInput);
 
@@ -60,7 +82,7 @@ function endQuiz() {
         }else{
             allscores = JSON.parse(allscores);
         }
-        
+
         allscores.push(finalscore);
         localStorage.setItem("allscores", JSON.stringify(allscores));
 
@@ -89,6 +111,8 @@ function updateTime() {
 function getQuestion() {
 
     startEL.style.display = "none";
+    introEl.style.display = "none";
+    intro2El.style.display = "none";
     
     //add a timer that will call updateTime every second
     intervalID = setInterval(updateTime, 1000);
